@@ -6,11 +6,11 @@ import time
 import shutil
 
 # set up your bot using the bot token provided by BotFather
-bot = telebot.TeleBot('6003923785:AAFqVJaZnBSNoTPLNUzXZZqb_mQ6Z1kEv5o')
+bot = telebot.TeleBot('')
 
 # set up your email credentials
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
-mail.login('GeorgyLabartkava@gmail.com', 'yrgoitwpbcdiyayd')
+mail.login('', '')
 mail.select('inbox')
 
 # set up a list to keep track of processed message IDs
@@ -42,9 +42,9 @@ def check_mail():
         print("sender:", sender)
         print("subject:", subject)
         if subject:
-            bot.send_message(chat_id='581851299', text="Hello, you've got mail from {} with the subject '{}'!".format(sender, subject))
+            bot.send_message(chat_id='', text="Hello, you've got mail from {} with the subject '{}'!".format(sender, subject))
         else:
-            bot.send_message(chat_id='581851299', text="Hello, you've got mail from {} with no subject.".format(sender))
+            bot.send_message(chat_id='', text="Hello, you've got mail from {} with no subject.".format(sender))
 
         # add the ID of the processed message to the list
         processed_ids.append(id)
@@ -52,7 +52,7 @@ def check_mail():
 # run the check_mail function every 10 minutes
 while True:
     check_mail()
-    time.sleep(6)
+    time.sleep(600)
 
 # remove the 'temp' directory and its contents
 shutil.rmtree('temp')
