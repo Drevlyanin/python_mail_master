@@ -14,6 +14,6 @@ Are you tired of constantly checking your Gmail inbox for new emails? Do you wis
 
 This script utilizes the power of the Telebot and IMAPLIB libraries to automate the process of checking for unread emails in your Gmail inbox and sending notifications to your Telegram bot. With just a few simple setup steps, you can sit back and relax while the script does the work for you.
 
-The script runs a check_mail() function every 6 seconds, searching for new unread emails and sending notifications to your Telegram bot with the sender and subject of the email. The processed_ids list ensures that you only receive notifications for new emails that have not already been processed.
+The script runs a check_mail() function every 10 minutes, searching for new unread emails and sending notifications to your Telegram bot with the sender and subject of the email. The processed_ids list ensures that you only receive notifications for new emails that have not already been processed.
 
 So why wait? Install this script today and start receiving notifications for new emails in your Gmail inbox through your Telegram bot!
